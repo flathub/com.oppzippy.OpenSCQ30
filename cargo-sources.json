@@ -2,8 +2,8 @@
     {
         "type": "git",
         "url": "https://github.com/oppzippy/openscq30-rifgen",
-        "commit": "e8da7ac6b91b37731e7bd15ee651192f758214e9",
-        "dest": "flatpak-cargo/git/openscq30-rifgen-e8da7ac"
+        "commit": "34d6584335b95749ef6eaaa007e7fec27c38352f",
+        "dest": "flatpak-cargo/git/openscq30-rifgen-34d6584"
     },
     {
         "type": "archive",
@@ -2088,12 +2088,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/openscq30-rifgen-e8da7ac/.\" \"cargo/vendor/rifgen\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/openscq30-rifgen-34d6584/.\" \"cargo/vendor/rifgen\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nauthors = [ \"Kofi Otuo <otuokofi@outlook.com>\",]\nname = \"rifgen\"\nversion = \"0.1.7\"\nedition = \"2021\"\nkeywords = [ \"swig\", \"java\", \"jni\", \"ffi\", \"cxx\",]\nrepository = \"https://github.com/Kofituo/rifgen\"\nlicense = \"MIT\"\ndescription = \"ffi Interface file generator. Use with flapigen\"\nreadme = \"README.md\"\ncategories = [ \"api-bindings\", \"development-tools\", \"development-tools::ffi\", \"development-tools::build-utils\",]\n\n[dependencies]\nderive-new = \"0.5\"\nInflector = \"0.11.4\"\n\n[dependencies.rifgen_attr]\npath = \"gen_attributes\"\nversion = \"0.1.0\"\n\n[dependencies.syn]\nversion = \"1.0\"\nfeatures = [ \"full\", \"extra-traits\", \"derive\",]\n\n[dependencies.rifgen_attributes_utils]\npath = \"attributes_utils\"\nversion = \"0.1.0\"\n",
+        "contents": "[workspace]\nmembers = [ \"gen_attributes\", \"attributes_utils\",]\n\n[package]\nauthors = [ \"Kofi Otuo <otuokofi@outlook.com>\",]\nname = \"rifgen\"\nversion = \"0.1.7\"\nedition = \"2021\"\nkeywords = [ \"swig\", \"java\", \"jni\", \"ffi\", \"cxx\",]\nrepository = \"https://github.com/Kofituo/rifgen\"\nlicense = \"MIT\"\ndescription = \"ffi Interface file generator. Use with flapigen\"\nreadme = \"README.md\"\ncategories = [ \"api-bindings\", \"development-tools\", \"development-tools::ffi\", \"development-tools::build-utils\",]\n\n[dependencies]\nderive-new = \"0.5\"\nInflector = \"0.11.4\"\n\n[dependencies.rifgen_attr]\npath = \"gen_attributes\"\nversion = \"0.1.0\"\n\n[dependencies.syn]\nversion = \"1.0\"\nfeatures = [ \"full\", \"extra-traits\", \"derive\",]\n\n[dependencies.rifgen_attributes_utils]\npath = \"attributes_utils\"\nversion = \"0.1.0\"\n",
         "dest": "cargo/vendor/rifgen",
         "dest-filename": "Cargo.toml"
     },
@@ -2106,12 +2106,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/openscq30-rifgen-e8da7ac/gen_attributes\" \"cargo/vendor/rifgen_attr\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/openscq30-rifgen-34d6584/gen_attributes\" \"cargo/vendor/rifgen_attr\""
         ]
     },
     {
         "type": "inline",
-        "contents": "path = \"gen_attributes\"\nversion = \"0.1.0\"\n",
+        "contents": "[package]\nname = \"rifgen_attr\"\nversion = \"0.1.0\"\nauthors = [ \"Kofi Otuo <otuokofi@outlook.com>\",]\nedition = \"2021\"\nlicense = \"MIT\"\nreadme = \"README.md\"\ndescription = \"To be used only with rifgen\"\nrepository = \"https://github.com/Kofituo/rifgen\"\n\n[lib]\nproc-macro = true\n\n[dependencies]\nquote = \"1.0\"\n\n[dependencies.syn]\nversion = \"1.0\"\nfeatures = [ \"full\", \"extra-traits\", \"derive\",]\n\n[dependencies.rifgen_attributes_utils]\npath = \"../attributes_utils\"\n",
         "dest": "cargo/vendor/rifgen_attr",
         "dest-filename": "Cargo.toml"
     },
@@ -2124,12 +2124,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/openscq30-rifgen-e8da7ac/attributes_utils\" \"cargo/vendor/rifgen_attributes_utils\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/openscq30-rifgen-34d6584/attributes_utils\" \"cargo/vendor/rifgen_attributes_utils\""
         ]
     },
     {
         "type": "inline",
-        "contents": "path = \"../attributes_utils\"\n",
+        "contents": "[package]\nname = \"rifgen_attributes_utils\"\nversion = \"0.1.0\"\nedition = \"2021\"\nlicense = \"MIT\"\ndescription = \"ffi Interface file generator. Use with flapigen\"\ncategories = [ \"api-bindings\", \"development-tools\", \"development-tools::ffi\", \"development-tools::build-utils\",]\n\n[dependencies]\nquote = \"1.0\"\nproc-macro2 = \"1.0\"\nitertools = \"0.10.3\"\n\n[dependencies.syn]\nversion = \"1.0\"\nfeatures = [ \"full\", \"extra-traits\", \"derive\",]\n",
         "dest": "cargo/vendor/rifgen_attributes_utils",
         "dest-filename": "Cargo.toml"
     },

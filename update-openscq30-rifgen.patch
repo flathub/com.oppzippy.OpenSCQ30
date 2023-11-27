@@ -1,0 +1,31 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index 199ad1a..730ce45 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1744,7 +1744,7 @@ checksum = "c08c74e62047bb2de4ff487b251e4a92e24f48745648451635cec7d591162d9f"
+ [[package]]
+ name = "rifgen"
+ version = "0.1.7"
+-source = "git+https://github.com/Oppzippy/openscq30-rifgen.git#e8da7ac6b91b37731e7bd15ee651192f758214e9"
++source = "git+https://github.com/Oppzippy/openscq30-rifgen.git#34d6584335b95749ef6eaaa007e7fec27c38352f"
+ dependencies = [
+  "Inflector",
+  "derive-new",
+@@ -1756,7 +1756,7 @@ dependencies = [
+ [[package]]
+ name = "rifgen_attr"
+ version = "0.1.0"
+-source = "git+https://github.com/Oppzippy/openscq30-rifgen.git#e8da7ac6b91b37731e7bd15ee651192f758214e9"
++source = "git+https://github.com/Oppzippy/openscq30-rifgen.git#34d6584335b95749ef6eaaa007e7fec27c38352f"
+ dependencies = [
+  "quote",
+  "rifgen_attributes_utils",
+@@ -1766,7 +1766,7 @@ dependencies = [
+ [[package]]
+ name = "rifgen_attributes_utils"
+ version = "0.1.0"
+-source = "git+https://github.com/Oppzippy/openscq30-rifgen.git#e8da7ac6b91b37731e7bd15ee651192f758214e9"
++source = "git+https://github.com/Oppzippy/openscq30-rifgen.git#34d6584335b95749ef6eaaa007e7fec27c38352f"
+ dependencies = [
+  "itertools 0.10.5",
+  "proc-macro2",
