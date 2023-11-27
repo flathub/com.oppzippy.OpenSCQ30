@@ -35,6 +35,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/Oppzippy/OpenSCQ30.git
-        tag: v1.8.0
-        commit: 1bd33b350e835c7cfa391c86b1b75d110dcdbf50
+        tag: v1.9.0
+        commit: 0ba2865c912b07535e169c224204626fead453fd
+      # Backport of unreleased commit fixing flatpak build. Delete for version after v1.9.0.
+      - type: patch
+        path: update-openscq30-rifgen.patch
       - cargo-sources.json
