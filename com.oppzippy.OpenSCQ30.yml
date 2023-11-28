@@ -40,4 +40,6 @@ modules:
       # Backport of unreleased commit fixing flatpak build. Delete for version after v1.9.0.
       - type: patch
         path: update-openscq30-rifgen.patch
+      - type: patch
+        path: appstream-screenshots.patch
       - cargo-sources.json
