@@ -1,10 +1,10 @@
 app-id: com.oppzippy.OpenSCQ30
-runtime: org.gnome.Platform
-runtime-version: "47"
-sdk: org.gnome.Sdk
+runtime: org.freedesktop.Platform
+runtime-version: "25.08"
+sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-command: openscq30_gui
+command: openscq30-gui
 finish-args:
   # x11/wayland
   - --socket=fallback-x11
@@ -19,19 +19,33 @@ build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
 
 modules:
-  - name: openscq30_gui
+  - name: cosmic-icons
+    buildsystem: simple
+    build-commands:
+      - pushd freedesktop && find ./scalable -type f -exec install -Dm0644 {} /app/share/icons/Cosmic/{} \; && popd
+      - pushd extra && find ./scalable -type f -exec install -Dm0644 {} /app/share/icons/Cosmic/{} \; && popd
+      - install -Dm0644 ./index.theme /app/share/icons/Cosmic/index.theme
+    sources:
+      - type: git
+        url: https://github.com/pop-os/cosmic-icons.git
+        tag: epoch-1.0.0-beta.1
+        commit: 70b07582e24ec2114672256b9657ca80670bca8a
+        x-checker-data:
+          type: git
+          tag-pattern: ^epoch-(.*)$
+
+  - name: openscq30-gui
     buildsystem: simple
     build-options:
       env:
-        CARGO_HOME: /run/build/openscq30_gui/cargo
+        CARGO_HOME: /run/build/openscq30-gui/cargo
     build-commands:
-      - cargo --offline fetch --manifest-path Cargo.toml --verbose
-      - cargo --offline build --release --package openscq30_gui --verbose
-      - ./gui/scripts/build-locale.sh
+      - cargo --offline fetch --manifest-path Cargo.toml
+      - cargo --offline build --release --package openscq30-gui
       - ./gui/scripts/install.sh /app
     sources:
       - type: git
         url: https://github.com/Oppzippy/OpenSCQ30.git
-        tag: v1.19.3
-        commit: cea547dcac5d4dba62070da0a8b3bc2a981aa43e
+        # tag: v2.0.0
+        commit: d9d614f969fe5f2ca86ab19ca2578f1db2560348
       - cargo-sources.json
