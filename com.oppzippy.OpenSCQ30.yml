@@ -1,6 +1,6 @@
 app-id: com.oppzippy.OpenSCQ30
 runtime: org.gnome.Platform
-runtime-version: "47"
+runtime-version: "49"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -34,4 +34,6 @@ modules:
         url: https://github.com/Oppzippy/OpenSCQ30.git
         tag: v1.19.3
         commit: cea547dcac5d4dba62070da0a8b3bc2a981aa43e
+      - type: patch
+        path: fix-appstream-metadata-errors.patch
       - cargo-sources.json
