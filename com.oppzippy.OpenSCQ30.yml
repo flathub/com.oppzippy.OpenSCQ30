@@ -46,6 +46,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/Oppzippy/OpenSCQ30.git
-        tag: v2.0.0-beta4
-        commit: 313d3ea9972f3712382b0668ebc10674e2526bc5
+        tag: v2.0.0-beta5
+        commit: 08e3d6b6cd8f2aa776c974e2fce9027411e2f04e
       - cargo-sources.json
