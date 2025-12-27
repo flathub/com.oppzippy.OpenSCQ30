@@ -42,10 +42,12 @@ modules:
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml
       - cargo --offline build --release --package openscq30-gui
+      - mkdir -p build-output
+      - cp target/release/openscq30-gui build-output/
       - ./gui/scripts/install.sh /app
     sources:
       - type: git
         url: https://github.com/Oppzippy/OpenSCQ30.git
-        tag: v2.0.1
-        commit: d26856d8dae6ee17d279212e01e0eef137cfabec
+        tag: v2.1.0
+        commit: b1dda2b8f8d89e918e5d861851b794b98091854d
       - cargo-sources.json
