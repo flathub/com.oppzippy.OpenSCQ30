@@ -53,3 +53,5 @@ modules:
         tag: v2.3.1
         commit: fab6836fb28ac0bcec08115c28598842960e35e6
       - cargo-sources.json
+      - type: patch
+        path: libcosmic-disable-dbus-config.patch
