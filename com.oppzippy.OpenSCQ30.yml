@@ -32,9 +32,6 @@ modules:
         url: https://github.com/pop-os/cosmic-icons.git
         tag: epoch-1.0.3
         commit: cd30ffd509bb6b289ac5d8ae26e2e30341e9b8cb
-        x-checker-data:
-          type: git
-          tag-pattern: ^epoch-(.*)$
 
   - name: openscq30-gui
     buildsystem: simple
