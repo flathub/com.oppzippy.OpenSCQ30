@@ -32,9 +32,6 @@ modules:
         url: https://github.com/pop-os/cosmic-icons.git
         tag: epoch-1.0.3
         commit: cd30ffd509bb6b289ac5d8ae26e2e30341e9b8cb
-        x-checker-data:
-          type: git
-          tag-pattern: ^epoch-(.*)$
 
   - name: openscq30-gui
     buildsystem: simple
@@ -50,8 +47,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Oppzippy/OpenSCQ30.git
-        tag: v2.3.1
-        commit: fab6836fb28ac0bcec08115c28598842960e35e6
+        tag: v2.4.0
+        commit: ca227de9eca06055eb815e7598789e76c3f82585
       - cargo-sources.json
       - type: patch
         path: libcosmic-disable-dbus-config.patch
