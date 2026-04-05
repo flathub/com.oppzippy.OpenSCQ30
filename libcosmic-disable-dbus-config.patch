@@ -1,26 +1,34 @@
 diff --git a/Cargo.toml b/Cargo.toml
-index dd4ac631..501d4437 100644
+index f758c1b8..d419ca68 100644
 --- a/Cargo.toml
 +++ b/Cargo.toml
 @@ -79,7 +79,7 @@ predicates = "3"
  bluer = "0.17"
  hex = "0.4"
  async-trait = "0.1"
--libcosmic = { git = "https://github.com/Oppzippy/libcosmic.git" }
-+libcosmic = { git = "https://github.com/Oppzippy/libcosmic.git", default-features = false }
- rusqlite = "0.38"
+-libcosmic = { git = "https://github.com/pop-os/libcosmic.git" }
++libcosmic = { git = "https://github.com/pop-os/libcosmic.git", default-features = false }
+ rusqlite = "0.39"
  syn = "2"
  quote = "1"
 diff --git a/gui/Cargo.toml b/gui/Cargo.toml
-index fb3a13e8..d786450c 100644
+index fb3a13e8..b9d60022 100644
 --- a/gui/Cargo.toml
 +++ b/gui/Cargo.toml
-@@ -18,7 +18,7 @@ tokio = { workspace = true, features = ["fs"] }
+@@ -17,10 +17,13 @@ bundled-dependencies = ["openscq30-lib/bundled-dependencies"]
+ tokio = { workspace = true, features = ["fs"] }
  futures = { workspace = true }
  libcosmic = { workspace = true, features = [
-     "a11y",
+-    "a11y",
 -    "dbus-config",
-+    "multi-window",
-     "tokio",
+-    "tokio",
++    "advanced-shaping",
      "winit",
++    "tokio",
++    "a11y",
++    "x11",
++    "iced-wayland",
++    "multi-window",
      "wgpu",
+     "about",
+ ] }
