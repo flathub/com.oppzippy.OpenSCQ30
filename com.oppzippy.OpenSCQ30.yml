@@ -30,8 +30,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pop-os/cosmic-icons.git
-        tag: epoch-1.0.3
-        commit: cd30ffd509bb6b289ac5d8ae26e2e30341e9b8cb
+        tag: epoch-1.0.9
+        commit: 5252095787cc96e2aed64604158f94e450703455
 
   - name: openscq30-gui
     buildsystem: simple
@@ -47,8 +47,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/Oppzippy/OpenSCQ30.git
-        tag: v2.6.0
-        commit: 178414a27bfdc344cae07e1375e2fb0a2e7819ea
+        tag: v2.6.2
+        commit: a286c9ecc933f11acf9358ef382b1ab2326f3227
       - cargo-sources.json
       - type: patch
         path: libcosmic-disable-dbus-config.patch
+      - type: patch
+        path: v2.6.2-appstream-fix.patch
