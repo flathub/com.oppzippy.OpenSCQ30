@@ -52,5 +52,3 @@ modules:
       - cargo-sources.json
       - type: patch
         path: libcosmic-disable-dbus-config.patch
-      - type: patch
-        path: v2.6.2-appstream-fix.patch
