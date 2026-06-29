@@ -8,7 +8,7 @@ index f758c1b8..d419ca68 100644
  async-trait = "0.1"
 -libcosmic = { git = "https://github.com/pop-os/libcosmic.git" }
 +libcosmic = { git = "https://github.com/pop-os/libcosmic.git", default-features = false }
- rusqlite = "0.39"
+ rusqlite = "0.40"
  syn = "2"
  quote = "1"
 diff --git a/gui/Cargo.toml b/gui/Cargo.toml
