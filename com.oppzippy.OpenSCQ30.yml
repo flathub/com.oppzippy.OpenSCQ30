@@ -47,8 +47,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Oppzippy/OpenSCQ30.git
-        tag: v2.9.0
-        commit: 3f88d149a38e833bab178c5744da8505f3a8df6e
+        tag: v2.10.0
+        commit: 7b3b5a92f89a562d0878f5a3835cf7cd96cc9234
       - cargo-sources.json
       - type: patch
         path: libcosmic-disable-dbus-config.patch
